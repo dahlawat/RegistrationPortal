@@ -18,15 +18,4 @@ public final class MessageUtils {
             return messagePattern;
         }
     }
-
-    public static String getMessage(String messagePattern, String... parameters) {
-        try {
-            if (parameters.length == 0) {
-                return getMessage(messagePattern);
-            }
-            return MessageFormat.format(getMessage(messagePattern), (Object[]) parameters);
-        } catch (MissingResourceException mre) {
-            return messagePattern;
-        }
-    }
 }

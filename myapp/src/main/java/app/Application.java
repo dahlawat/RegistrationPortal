@@ -35,12 +35,12 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    /**
+/*    *//**
      * A CommandLineRunner to load few entitie as test inputs initially in the database
      *
      * @param studentRepository
      * @return
-     */
+     *//*
     @Bean
     CommandLineRunner init(StudentRepository studentRepository) {
         return args -> {
@@ -52,7 +52,7 @@ public class Application {
             });
             studentRepository.findAll().forEach(System.out::println);
         };
-    }
+    }*/
 
     /**
      * Mapping the ObjectMapper to stick to the new (de)serialization classes for all LocalDate based inputs

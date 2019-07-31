@@ -26,7 +26,7 @@ export class StudentFormComponent {
   }
 
   gotoStudentList() {
-    this.router.navigate(['/student/all']);
+    this.router.navigate(['student/all']);
   }
 
   generateStudentRegistration() {

@@ -28,7 +28,7 @@ export class StudentEditComponent implements OnInit {
   }
 
   gotoStudentList() {
-    this.router.navigate(['/student/all']);
+    this.router.navigate(['student/all']);
   }
 
 }

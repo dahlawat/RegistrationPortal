@@ -11,15 +11,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
 @ToString
 @Getter
 @Setter
+@NoArgsConstructor
+@Valid
 public class Student {
-
-    public Student() {}
 
     public Student(String name, String registration, LocalDate birthDate, Address address) {
         this.name = name;
@@ -32,13 +34,17 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String registration;
 
+    @NotNull
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate birthDate;
 
     @Embedded
+    @NotNull
     private Address address;
 }
