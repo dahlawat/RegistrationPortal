@@ -7,7 +7,6 @@
         <th scope="col">Name</th>
         <th scope="col">Registration</th>
         <th scope="col">Birth Date</th>
-        <th scope="col">Address</th>
         <th scope="col">Street</th>
         <th scope="col">House Number</th>
         <th scope="col">PinCode</th>
@@ -20,10 +19,9 @@
         <td>{{ student.name }}</td>
         <td>{{ student.registration }}</td>
         <td>{{ student.birthDate }}</td>
-        <td>{{ student.address }}</td>
-        <td>{{ student.add.street}}</td>
-        <td>{{ student.add.houseNumber}}</td>
-        <td>{{ student.add.pinCode.toLocaleUpperCase()}}</td>
+        <td>{{ student.address.street}}</td>
+        <td>{{ student.address.houseNumber}}</td>
+        <td>{{ student.address.pinCode.toLocaleUpperCase()}}</td>
         <td><a [routerLink]="['/student', student.id]" class="btn btn-primary">Edit</a></td>
       </tr>
       </tbody>
