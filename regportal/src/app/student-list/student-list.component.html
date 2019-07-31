@@ -1,0 +1,32 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Registration</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">Address</th>
+        <th scope="col">Street</th>
+        <th scope="col">House Number</th>
+        <th scope="col">PinCode</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.id}}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.registration }}</td>
+        <td>{{ student.birthDate }}</td>
+        <td>{{ student.address }}</td>
+        <td>{{ student.add.street}}</td>
+        <td>{{ student.add.houseNumber}}</td>
+        <td>{{ student.add.pinCode.toLocaleUpperCase()}}</td>
+        <td><a [routerLink]="['/student', student.id]" class="btn btn-primary">Edit</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
